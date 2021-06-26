@@ -1,157 +1,430 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>首頁(html test)</title>
-    <style type="text/css">
-        .title{font-weight:bold;font-size:100px}
-        .border{border: 5px aqua dashed;width:200px;margin-left:10px;font-size:35px;}
-        .keyword{border: 5px gold solid;color:aquamarine;background-color:black;}
-        .text{margin-top:20px;margin-bottom:20px;font-size:50px}
-    </style>
-</head>
-<body>
-    <div class="title">
-        Hello 
-        <span class="keyword">World</span>
-        <span class="border">作者:姜伯叡</span>
-    </div>
+<!DOCTPYE html>
+<html class="margin">
+    <head>
+        <title>首頁</title>
+        <meta charset="utf-8"/>
+        <style type="text/css">
+        /* 標籤名稱選擇器 */
+            img{width:400px;height:200px}
+        /* class 選擇器 */
+            .text{color:bisque;font-size:35px;font-family:"標楷體";font-weight:bold;}
+            .command{color:gray;border:3px aqua solid;background-color:black;width:850px}
+
+        /* ID 選擇器*/
+            #keyword{color:aqua;background-color:chocolate;border:3px black solid;width:280px}
+
+        /* 虛擬選擇器 */
+        /*hover: 滑鼠移到目標時，套用設定*/
+            button:hover{background-color:lightblue;}
+        /*focus: 當目標取得焦點時，套用設定*/
+            input:focus{border: 3px purple solid}
+            
+        /*階層式選擇器*/
+            .margin body{margin-bottom:100px;margin-right:100px;background-color:bisque;}
+        </style>
+    </head>
+    <body style="background-image:url('https://cdn.discordapp.com/attachments/464997584369352715/858320588540215316/2021-02-19_20.22.50.png')">
+        <div class="text" style="font-size:80px;">星空網    <span id="keyword" style="font-size:40px">作者:姜伯叡</span></div>
+        <hr/>
+
+        <br/>
+        <div class="text" style="position:relative;left:600px;font-size:80px;">
+            head(背景)
+        </div>
+        <div class="text" style="position:relative;left:400px;">
+                <div class="command">
+                ＜<span style="color:steelblue">head</span>＞[背景內的標籤]＜/<span style="color:steelblue">head</span>＞
+                </div>
+        </div>
+        <hr/>
+
+        <div class="text">一、title標籤 - 設定網頁名</div>
+        <div class="text">
+            指令:
+            <div class="command">
+                ＜<span style="color:steelblue">title</span>＞<span style="color:white">[網頁名]</span>＜/<span style="color:steelblue">title</span>＞
+            </div>
+        </div>
+        <hr/>
+
+        <div class="text">二、meta標籤 - 宣告使用的編碼</div>
+        <div class="text">
+            指令:
+            <div class="command">
+                ＜<span style="color:steelblue">meta</span>  <span style="color:aqua">charset</span>=<span style="color:chocolate">"[編碼名]"</span>/＞
+            </div>
+        </div>
+        <hr/>
+
+        <div class="text">三、style標籤 - </div>
+        <div class="text">
+            指令:
+            <div class="command">
+                ＜<span style="color:steelblue">style</span>  <span style="color:aqua">type=</span>=<span style="color:chocolate">"text/css"</span>＞
+                <div style="color:white">
+                    [CSS選擇器]
+                </div>
+                ＜/<span style="color:steelblue">style</span>＞
+            </div>
+        </div>
+        <br/><br/>
+        <table class="text" style="font-size:20px;width:1300px" border="5">
+            <tr>
+                <td>名稱</td>
+                <td>語法</td>
+                <td>範例</td>
+                <td>備註</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td colspan="2" align="center">(無)</td>
+                <td rowspan="4"/>
+            </tr>
+            <tr>
+                <td>標籤名稱選擇器</td>
+                <td>[標籤名稱]{[CSS]}</td>
+                <td>body{margin-bottom=10px}</td>
+            </tr>
+            <tr>
+                <td>Class選擇器</td>
+                <td>.[class名稱]{[CSS]}</td>
+                <td>.text{font-family:"標楷體"}</td>
+            </tr>
+            <tr>
+                <td>ID選擇器</td>
+                <td>#[ID]{[CSS]}</td>
+                <td>#keyword{color:auqa}</td>
+            </tr>
+            <tr>
+                <td rowspan="2">虛擬選擇器</td>
+                <td>1. [標籤名稱]:hover{[CSS]}<br/>2. .[class名稱]:hover{[CSS]}<br/>3. #[ID]:hover{[CSS]}</td>
+                <td>1.body:hover{margin-bottom=10px}<br/>2. .text:hover{font-wed}<br/>3. #btn:hover{color:auqa}</td>
+                <td>滑鼠移到目標時，<br/>套用設定</td>
+            </tr>
+            <tr>
+                <td>1. [標籤名稱]:focus{[CSS]}<br/>2. .[class名稱]:focus{[CSS]}<br/>3. #[ID]:focus{[CSS]}</td>
+                <td>1.body:focus{margin-bottom=10px}<br/>2. .text:focus{font-wed}<br/>3. #btn:focus{color:auqa}</td>
+                <td>當目標取得焦點時，套用設定</td>
+            </tr>
+            <tr>
+                <td>階層式選擇器</td>
+                <td>1. .[class名稱] [內有小標籤的大標籤名]{[CSS]}<br/>2. #[ID]  [內有小標籤的大標籤名]{[CSS]}</td>
+                <td>1. .text body{font-wed}<br/>2. #btn body{color:auqa}</td>
+                <td/>
+            </tr>
+        </table>
+        <hr/>
+
+        <br/>
+        <div class="text" style="position:relative;left:600px;font-size:80px;">
+            body(內容)
+        </div>
+        <div class="text" style="position:relative;left:400px;">
+                <div class="command">
+                ＜<span style="color:steelblue">body</span>＞[網頁內容]＜/<span style="color:steelblue">body</span>＞
+                </div>
+        </div>
+        <hr/>
+
+        <!-- 
+            CSS文本
+            <div ([選擇器名稱]="[CSS]")>
+                (<span ([選擇器名稱]="[CSS]")>)
+                    [文字]
+                </span>)(<br/>)
+            </div>
+        -->
+        <div class="text">一、文本<span id="keyword">參考 附件一 & 二-1 -2</span></div>
+        <div class="text">安安<span id="keyword">你好</span><span style="color:blue">啊~</span></div>
+        <div class="text">
+            指令:
+            <div class="command">
+                ＜<span style="color:steelblue">div</span>  <span style="color:aqua">[選擇器名稱]</span>=<span style="color:chocolate">"[CSS]"</span>＞
+                <div style="color:white">
+                    [文字]
+                </div>
+                <div style="margin-left:10px;border:3px white solid;width:750px">
+                    ＜<span style="color:steelblue">[div/span]</span>   <span style="color:aqua">[選擇器名稱]</span>=<span style="color:chocolate">"[CSS]"</span>＞
+                    <div style="color:white">
+                        [文字]
+                    </div>
+                    ＜/<span style="color:steelblue">[div/span]</span>＞
+                </div>
+                ＜/<span style="color:steelblue">div</span>＞</span>
+            </div>
+        </div>
+        <hr/>
+
+        <!-- 圖片=> <img ([選擇器名稱]="[CSS]") src="[檔案位置]"> -->
+        <div class="text">二、圖片<span id="keyword">參考 附件一 & 二-1 -3</span></div>
+        <img class="img" src="https://cdn.discordapp.com/attachments/464997584369352715/830699019616649216/novaskin-minecraft-wallpaper_5.jpeg"/>
+        <div class="text">
+            指令:
+            <div class="command">
+                ＜<span style="color:steelblue">img</span>  <span style="color:aqua">[選擇器名稱]</span>=<span style="color:chocolate">"[CSS]"</span> <span style="color:aqua">src</span>=<span style="color:chocolate">"[檔案位置]"</span>/＞
+            </div>
+        </div>
+        <hr/>
+
+        <!-- 鏈結=> <a ([選擇器名稱]="[CSS]") href="[網址]"> -->
+        <div class="text">三、鏈結<span id="keyword">參考 附件一 & 二-1 -2</span></div>
+        <a class="text" href="http:\\www.youtube.com">Youtube</a>
+        <div class="text">
+            指令:
+            <div class="command">
+                ＜<span style="color:steelblue">a</span> <span style="color:aqua">  <span style="color:aqua">[選擇器名稱]</span>=<span style="color:chocolate">"[CSS]"</span>href</span>=<span style="color:chocolate">"[網址]"</span>＞
+                <div style="color:white">
+                    [文字]
+                </div>
+                ＜/a＞
+            </div>
+        </div>
+        <hr/>
+
+        <!-- 按鈕=> <button ([選擇器名稱]="[CSS]")> -->
+            <div class="text">四、按鈕<span id="keyword">參考 附件一 & 二-1 -2 -3</span></div>
+            <button style="width:100px;height:50px;" class="text">按鈕</button>
+            <div class="text">
+                指令:
+                <div class="command">
+                    ＜<span style="color:steelblue">botton</span>  <span style="color:aqua">[選擇器名稱]</span>=<span style="color:chocolate">"[CSS]"</span>＞
+                    <div style="color:white">
+                        [文字]
+                    </div>
+                    ＜/<span style="color:steelblue">botton</span>＞
+                </div>
+            </div>
+            <hr/>
+
+        <!-- 輸入欄=> <input ([選擇器名稱]="[CSS]")> -->
+            <div class="text">五、輸入欄<span id="keyword">參考 附件一 & 二-1 -3</span></div>
+            <input style="width:800px;height:45px;"/>
+            <div class="text">
+                指令:
+                <div class="command">
+                    ＜<span style="color:steelblue">input</span>  <span style="color:aqua">[選擇器名稱]</span>=<span style="color:chocolate">"[CSS]"</span>/＞
+                </div>
+            </div>
+            <hr/>
+
+        <!-- 
+            列表=>
+            <ul ([選擇器名稱]="[CSS]")> 
+                <li>第一項</li>
+                <li>第二項</li>
+            </ul>
+        -->
+        <div class="text">六、列表 <span id="keyword">參考 附件一 & 二-1 -2 </span></div>
+        <ul  class="text">
+            <li>第一項</li>
+            <li>第二項</li>
+        </ul>
+        <div class="text">
+            指令:
+            <div class="command">
+                ＜<span style="color:steelblue">ul</span>  <span style="color:aqua">[選擇器名稱]</span>=<span style="color:chocolate">"[CSS]"</span>＞<br/>＜<span style="color:steelblue">li</span>＞<span style="color:white">[文字(第一項)]</span>＜/<span style="color:steelblue">li</span>＞<br/>＜<span style="color:steelblue">li</span>＞<span style="color:white">[文字(第二項)]</span>＜/<span style="color:steelblue">li</span>＞
+                <div style="color:green">
+                    ＜!--以此類推--＞
+                </div>
+                ＜/<span style="color:steelblue">ul</span>＞
+            </div>
+        </div>
+        <hr/>
+
+        <!-- 
+            表格=>
+            <table ([選擇器名稱]="[CSS]")>
+                <tr> 
+                    <li>1-1</li>
+                    <li>1-1</li>
+                </tr>
+                <tr> 
+                    <li>2-1</li>
+                    <li>2-2</li>
+                </tr>
+            </table>
+        -->
+        <div class="text">七、表格<span id="keyword">參考 附件一 & 二-1 -2 -3 </span></div>
+        <table class="text" border="3" width=500>
+            <tr>
+                <td/>
+                <td><u>老姜</u></td>
+                <td><u>阿伯</u></td>
+                <td><u>星空</u></td>
+            </tr>
+            <tr>
+                <td>麵包(塊)</td>
+                <td>10</td>
+                <td>5</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>餅乾(包)</td>
+                <td>9</td>
+                <td>13</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <div class="text">
+            指令:
+            <div class="command">
+                ＜<span style="color:steelblue">table</span>  <span style="color:aqua">[選擇器名稱]</span>=<span style="color:chocolate">"[CSS]"</span>＞<br/>＜<span style="color:steelblue">tr</span>＞<br/>＜<span style="color:steelblue">td</span>＞<span style="color:white">[文字(1-1格)]</span>＜/<span style="color:steelblue">td</span>＞<br/>＜<span style="color:steelblue">td</span>＞<span style="color:white">[文字(1-2格)]</span>＜/<span style="color:steelblue">td</span>＞<br/>＜<span style="color:steelblue">td</span>＞<span style="color:white">[文字(1-3格)]</span>＜/<span style="color:steelblue">td</span>＞<br/>＜／<span style="color:steelblue">tr</span>＞<br/>＜<span style="color:steelblue">tr</span>＞<br/>＜<span style="color:steelblue">td</span>＞<span style="color:white">[文字(2-1格)]</span>＜/<span style="color:steelblue">td</span>＞<br/>＜<span style="color:steelblue">td</span>＞<span style="color:white">[文字(2-2格)]</span>＜/<span style="color:steelblue">td</span>＞<br/>＜<span style="color:steelblue">td</span>＞<span style="color:white">[文字(2-3格)]</span>＜/<span style="color:steelblue">td</span>＞<br/>＜/<span style="color:steelblue">tr</span>＞<div style="color:green">＜!--以此類推--＞</div>＜/<span style="color:steelblue">table</span>＞
+            </div>
+        </div>
+        <hr/>
+
+        <br/>
+        <div class="text" style="position:relative;left:600px;font-size:80px;">
+            附件
+        </div>
+        <hr/>
+
+        <!--附件一 CSS選擇器-->
+        <div class="text">附件一 CSS選擇器</div>
+        <table class="text" style="font-size:20px;width:700px" border="5">
+            <tr>
+                <td>名稱</td>
+                <td>語法</td>
+                <td>範例</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>style="[CSS]"</td>
+                <td>＜div style="color:aqua"＞</td>
+            </tr>
+            <tr>
+                <td>標籤名稱選擇器</td>
+                <td colspan="2" align="center">(無)</td>
+            </tr>
+            <tr>
+                <td>Class選擇器</td>
+                <td>class="[class名稱]"</td>
+                <td>＜div class="text"＞</td>
+            </tr>
+            <tr>
+                <td>ID選擇器</td>
+                <td>id="ID名稱"</td>
+                <td>＜span id="keyword"＞</td>
+            </tr>
+            <tr>
+                <td>虛擬選擇器</td>
+                <td>1. class="[class名稱]"<br/>2. id="[ID]"<br/>3. (不用打)</td>
+                <td>1. ＜div class="text"＞<br/>2. ＜span id="btn"＞<br/>3. ＜div＞</td>
+            </tr>
+            <tr>
+                <td>階層式選擇器</td>
+                <td>1. class="[class名稱]"<br/>2. id="[ID]"</td>
+                <td>1. ＜div class="link"＞<br/>2. ＜div id="input"＞</td>
+            </tr>
+        </table>
+        <hr/>
+
+        <!--附件二 CSS文法-->
+        <div class="text">附件二 CSS文法</div>
+        <div class="text">1、body內的任何標籤都可用</div>
+        <table class="text" style="font-size:20px;width:1200px" border="5">
+            <tr>
+                <td>語法</td>
+                <td>功能</td>
+                <td>備註</td>
+                <td>範例</td>
+            </tr>
+
+            <tr>
+                <td>color:[顏色]</td>
+                <td>更改顏色</td>
+                <td rowspan="2"/>
+                <td>＜div style="color:aqua"＞</td>
+            </tr>
+
+            <tr>
+                <td>background-color:[顏色]</td>
+                <td>更改背景顏色</td>
+                <td>＜div style="background-color:aqua"＞</td>
+            </tr>
+
+            <tr>
+                <td>margin-[方向]:[數值]px</td>
+                <td>增加此方向的空格大小</td>
+                <td>方向:<br/>1. top - 上<br/>2. bottom - 下<br/>3. left - 左<br/>4. right - 右</td>
+                <td>＜div style="margin-right:30px"＞</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">border:[數值]px [種類] [顏色]</td>
+                <td rowspan="2">設定邊框</td>
+                <td>[數值]px -> 邊框線條粗細</td>
+                <td rowspan="2">＜div style="border:10px dashed aqua"＞</td>
+            </tr>
+
+            <tr>
+                <td>種類:<br/>1. solid - 實線<br/>2. dashed - 虛線</td>
+            </tr>
+
+            <tr>
+                <td>position:[種類]</td>
+                <td>索取位置的方式</td>
+                <td>種類:<br/>1. relative - 相對位置<br/>2. absolute - 絕對位置</td>
+                <td>＜div style="position:relative"＞</td>
+            </tr>
+
+            <tr>
+                <td>[方向]:[數值]px</td>
+                <td>設定位置</td>
+                <td>方向:<br/>1. top - 上<br/>2. bottom - 下<br/>3. left - 左<br/>4. right - 右</td>
+                <td>＜div style="left:10px"＞</td>
+            </tr>
+        </table>
+        <div class="text">2、div & ul & table ...等，要件中內涵文字的標籤</div>
+        <table class="text" style="font-size:20px;width:1100px" border="5">
+            <tr>
+                <td>語法</td>
+                <td>功能</td>
+                <td>備註</td>
+                <td>範例</td>
+            </tr>
+
+            <tr>
+                <td>font-size:[數值]px</td>
+                <td>更改字體大小</td>
+                <td/>
+                <td>＜div style=font-size:20px＞</td>
+            </tr>
+            
+            <tr>
+                <td>font-weight:[種類/數值]</td>
+                <td>更改字的筆劃粗細</td>
+                <td>種類:<br/>1. bold - 粗體<br/>2. bolder - 比粗體更粗<br/>3. lighter - 比一般字體更細</td>
+                <td>＜div style="font-weight:bolder"＞</td>
+            </tr>
+
+            <tr>
+                <td>font-family:"[字體名]"</td>
+                <td>更改字體</td>
+                <td/>
+                <td>＜div style="font-family:"標楷體"＞</td>
+            </tr>
+        </table>
+        <div class="text">3、table & border & img ...等，圖片、圖形標籤</div>
+        <table class="text" style="font-size:20px;width:500px" border="5">
+            <tr>
+                <td>語法</td>
+                <td>功能</td>
+                <td>範例</td>
+            </tr>
+
+            <tr>
+                <td>width:[數值]px</td>
+                <td>更改寬度</td>
+                <td>＜table width:10＞</td>
+            </tr>
+
+            <tr>
+                <td>height:[數值]px</td>
+                <td>更改高度</td>
+                <td>＜table height:10px＞</td>
+            </tr>
+        </table>
+    </body>
     <hr/>
-    <div class="text" style="position:relative;left:400px">照片</div>
-    <img 
-    src="E:\哥哥的東西\圖片\novaskin\novaskin-minecraft-wallpaper.jpeg" 
-    style="position:absolute;left:600px;width: 4px;width:400px;height:200px;"
-    />
-    <div class="text">前往指定網址</div>
-    <ul>
-        <li><a href="http://www.youtube.com/">Youtube</a></li>
-        <li><a href="http://www.facebook.com/">Facebook</a></li>
-        <li><a href="http://www.google.com/">Google</a></li>
-    </ul>
-    <div class="text">Html & Css 語言</div>
-    <table border="5" width="1300" cellpadding="10">
-        <tr>
-            <td><b>類別</b></td>
-            <td><b>指令</b></td>
-            <td><b>用途及備註</b></td>
-            <td><b>範例</b></td>
-        </tr>
-        <tr>
-            <td><b>函式頭尾界線<br/><br/><br/></b></td>
-            <td><b>＜!DOCTYPE html＞<br/>＜html＞<br/><br/></b></td>
-            <td/>
-            <td><b>＜!DOCTYPE html＞<br/>＜html＞<br/>＜/html＞</b></td>
-        </tr>
-        <tr>
-            <td><b>結尾</b></td>
-            <td><b>＜/(指令)＞</b></td>
-            <td/>
-            <td><b>＜h＞Text＜/h＞</b></td>
-        </tr>
-        <tr>
-            <td>----------</td>
-            <td><b>＜(指令)/＞</b></td>
-            <td>
-                <b>
-                    開頭和結尾中<u>無內容</u>，用此可省略<u>＜/(指令)＞</u>
-                </b>
-            </td>
-            <td><b>＜br/＞</b></tr></td>
-        </tr>
-        <tr>
-            <td><b>結尾</b></td>
-            <td><b>＜/(指令)＞</b></td>
-            <td/>
-            <td><b>＜h＞Text＜/h＞</b></td>
-        </tr>
-    </table>
-    <div class="border" style="margin-top:20px;margin-bottom:20px">
-        主體(head)
-    </div>
-    <table border="5" width="1300" cellpadding="10">
-        <tr>
-            <td><b>主體頭尾界線</b><br/><br/></td>
-            <td><b>＜head＞<br/></br></b></td>
-            <td/>
-            <td><b><＜head＞<br/>＜/head＞></b></td>
-        </tr>
-        <tr>
-            <td><b>網頁名稱</b></td>
-            <td><b>＜title＞</br></b></td>
-            <td/>
-            <td><b><＜title＞首頁＜/title＞></b></td>
-        </tr>
-        <tr>
-            <td><b>CSS選擇器<br/><br/><br/><br/></b></td>
-            <td><b>＜style＞</br></br></br><br/></b></td>
-            <td>
-                <b>
-                    type=" "<br/><br/>
-                    -> text/css<br/><br/>
-                </b>
-            </td>
-            <td>
-                <b>
-                    ＜style type="text/css"＞<br/>
-                        .text{font-size:50px}<br/>
-                        .keyword{color:yellow}<br/>
-                    ＜/style＞
-                </b>
-            </td>
-        </tr>
-    </table>
-    <div class="border" style="margin-top:20px;margin-bottom:20px">
-        內容(body)
-    </div>
-    <table border="5" width="1300" cellpadding="10">
-        <tr>
-            <td><b>內容頭尾界線</b></td>
-            <td><b>＜body＞</br></b></td>
-            <td/>
-            <td><b>＜body＞<br/>＜/body＞></b></td>
-        </tr>
-        <tr>
-            <td><b>標題</b></td>
-            <td><b>＜h(序位)＞</br></b></td>
-            <td/>
-            <td><b>＜h3＞Text＜/h3＞></b></td>
-        </tr>
-        <tr>
-            <td/>
-            <td>
-                <b>
-                    ＜div＞
-                        </br></br></br></br></br></br></br></br></br></br>
-                        </br></br></br></br></br></br></br></br></br></br>
-                </b>
-            </td>
-            <td>
-                <b>
-                    ＜span＞ (使某些字句使用不同效果)<br/><br/>
-                    ＜br＞ (強制換行)<br/><br/>
-                    style=" "<br/><br/>
-                    -> font-size:(數值)px[大小]<br/>
-                    -> font-weight:(種類)[線條粗細(種類:bold粗體)]<br/>
-                    -> margin-(方向):數值px[與內容的間隔大小(方向:top上 & bottom下 & left左 & right右)]<br/>
-                    -> color:(顏色名)[顏色]<br/>
-                    -> border (數值)px (顏色) (種類)[邊框 (種類:solid實線 & dashed虛線)]<br/>
-                    -> background-color:(顏色)[背景顏色]<br/>
-                    -> width:(數值)px[寬度]<br/>
-                    -> height:(數值)px[高度]<br/>
-                    -> position:(種類)[位置基準點的索取方式(種類:relative相對位置 & absolute絕對位置)]<br/>
-                    -> (方向):(數值)px[位置(方向:top上 & bottom下 & left左 & right右]<br/><br/>
-                    class="CSS名稱"
-                </b>
-            </td>
-            <td>
-                <b>
-                    ＜div style="color:aqua">Text＜/div＞<br/>
-                    ＜div>＜span style="color:aqua"＞Text＜/div＞<br/>
-                    ＜div＞Tex＜br/＞t＜br/＞＜/div＞
-                        <br/><br/><br/><br/><br/><br/><br/><br/></br>
-                        <br/><br/><br/><br/><br/><br/><br/><br/></br>
-                </b>
-            </td>
-        </tr>
-    </table>
-</body>
 </html>
